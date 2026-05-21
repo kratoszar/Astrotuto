@@ -1,4 +1,7 @@
 ---
+import Footer from '../components/footer.astro';
+import Header from '../components/Header.astro';
+import '../styles/global.css';
 const pageTitle = "Sobre mi";
 
 const identity = {
@@ -16,6 +19,8 @@ const finished = false;
 const goal = 3;
 
 const skillColor = "crimson";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 
@@ -27,24 +32,22 @@ const skillColor = "crimson";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
-        
-         <style define:vars={{skillColor}}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
 
-      .skill {
-    color: var(--skillColor);
-    font-weight: bold;
+        <style define:vars={{skillColor, fontWeight, textCase}}>
+  h1 {
+    color: purple;
+    font-size: 4rem;
   }
-    </style>
+  .skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+</style>
         
 	</head>
 	<body>
-    <a href="/">Inicio</a>
-    <a href="/about/">Sobre mi</a>
-	<a href="/blog/">Blog</a>
+     <Header />
 
   <h1>Mi sitio Astro</h1>
   <h1>{pageTitle}</h1>
@@ -78,7 +81,6 @@ const skillColor = "crimson";
   <p>Este sitio se estara actualizando </p>
 
 
-
+<Footer />
 </body>
-	</body>
 </html>
