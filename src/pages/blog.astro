@@ -2,7 +2,7 @@
 import Footer from '../components/footer.astro';
 import Header from '../components/Header.astro';
 import '../styles/global.css';
-
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 
 const pageTitle = "Mi blog";
 ---
@@ -24,9 +24,7 @@ const pageTitle = "Mi blog";
   <p>Aquí es donde publicaré cosas.</p>
 
   <ul>
-      <li><a href="/posts/post-1/">Publicación 1</a></li>
-      <li><a href="/posts/post-2/">Publicación 2</a></li>
-      <li><a href="/posts/post-3/">Publicación 3</a></li>
+     {allPosts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
     </ul>
 
 <Footer />
