@@ -8,3 +8,5 @@ image:
 pubDate: 05-21-2026
 tags: ["astro", "aprender en público", "contratiempos", "comunidad"]
 ---
+
+agregue este tercer post

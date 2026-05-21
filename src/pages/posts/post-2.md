@@ -8,3 +8,4 @@ image:
 pubDate: 05-21-2026
 tags: ["astro", "bloguear", "aprender en público", "éxitos"]
 ---
+agregue este segundo post
