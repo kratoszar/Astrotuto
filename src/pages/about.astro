@@ -31,9 +31,28 @@ const skills = ["HTML", "CSS", "JavaScript",];
   <h1>{pageTitle}</h1>
   <h2>Mi sitio con Astro</h2>
 
-  <p>Estoy trabajando en el tutorial</p>
 
+
+  <p>Algunos datos sobre mí:</p>
+<ul>
+  <li>Me llamo {identity.firstName}.</li>
+  <li>Vivo en {identity.country} y soy {identity.occupation}.</li>
+  {identity.hobbies.length >= 2 &&
+    <li>un hobby: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
+  }
+</ul>
+<p>Mis habilidades son:</p>
+<ul>
+  {skills.map((skill) => <li>{skill}</li>)}
+</ul>
+
+
+
+  <p>Estoy trabajando en el tutorial</p>
   <p>Este sitio se estara actualizando </p>
+
+
+
 </body>
 	</body>
 </html>
