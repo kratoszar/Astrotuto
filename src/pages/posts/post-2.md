@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Mi segunda publicación en el blog
 author: Alberto
 description: "he estado haciendo mas cambios del tutorial"

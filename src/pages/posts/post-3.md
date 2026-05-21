@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Mi tercera publicación
 author: Alberto
 description: "Sigo aprendiendo."
